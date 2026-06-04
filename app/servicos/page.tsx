@@ -27,7 +27,7 @@ const services = [
       "SEO e otimização de performance",
     ],
     technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
-    priceRange: "A partir de R$ 2.000",
+    priceRange: "A partir de R$ 500",
     timeline: "1 a 8 semanas",
   },
   {
@@ -45,7 +45,7 @@ const services = [
       "Atualizações OTA",
     ],
     technologies: ["React Native", "Expo", "TypeScript"],
-    priceRange: "A partir de R$ 8.000",
+    priceRange: "A partir de R$ 1.000",
     timeline: "4 a 10 semanas",
   },
   {
@@ -63,7 +63,7 @@ const services = [
       "Deploy em cloud",
     ],
     technologies: ["Node.js", "Go", "PostgreSQL", "Docker"],
-    priceRange: "A partir de R$ 5.000",
+    priceRange: "A partir de R$ 2.500",
     timeline: "2 a 6 semanas",
   },
   {
@@ -99,7 +99,7 @@ const services = [
       "SLA de 24h úteis",
     ],
     technologies: ["Todas as stacks que trabalhamos"],
-    priceRange: "A partir de R$ 500/mês",
+    priceRange: "A partir de R$ 100/mês",
     timeline: "Contrato mínimo de 3 meses",
   },
   {
