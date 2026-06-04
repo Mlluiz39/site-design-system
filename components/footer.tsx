@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Mail, Phone, MapPin } from "lucide-react"
+import { siteConfig, getWhatsAppUrl } from "@/lib/site-config"
 
 const footerLinks = {
   servicos: [
@@ -106,16 +107,16 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="mailto:contato@mlluizdevtech.com.br"
+                  href={`mailto:${siteConfig.contact.email}`}
                   className="flex items-center gap-2 text-sm text-[var(--steel)] hover:text-[var(--ink-deep)] transition-colors"
                 >
                   <Mail className="h-4 w-4" />
-                  contato@mlluizdevtech.com.br
+                  {siteConfig.contact.email}
                 </a>
               </li>
               <li>
                 <a
-                  href="https://wa.me/5511999999999"
+                  href={siteConfig.whatsapp.baseUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-sm text-[var(--steel)] hover:text-[var(--ink-deep)] transition-colors"

@@ -61,7 +61,7 @@ export default function SobrePage() {
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {/* Hero Section */}
         <section className="bg-[var(--canvas)] py-16 md:py-24">
           <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">

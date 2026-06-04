@@ -6,6 +6,7 @@ import { ArrowRight, ChevronDown, ChevronUp } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { getWhatsAppUrl } from "@/lib/site-config"
 
 const faqs = [
   {
@@ -124,7 +125,7 @@ export default function FAQPage() {
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {/* Hero Section */}
         <section className="bg-[var(--canvas)] py-16 md:py-24">
           <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
@@ -189,7 +190,7 @@ export default function FAQPage() {
                   className="w-full sm:w-auto rounded-full border-2 border-[var(--ink-deep)] text-[var(--ink-deep)] hover:bg-[var(--surface-soft)]"
                 >
                   <a
-                    href="https://wa.me/5511999999999?text=Ol%C3%A1%21%20Tenho%20uma%20d%C3%BAvida%20sobre%20os%20servi%C3%A7os."
+                    href={getWhatsAppUrl("doubt")}
                     target="_blank"
                     rel="noopener noreferrer"
                   >

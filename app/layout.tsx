@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import { Inter, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { ThemeProvider } from '@/components/theme-provider'
+import { MotionProvider } from '@/components/motion-provider'
+import { LocalBusinessJsonLd } from '@/components/json-ld'
 import './globals.css'
 
 const inter = Inter({ 
@@ -16,9 +19,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'mlluizdevtech | Software House com IA e Automacao',
-  description: 'Software sob medida com automacao e IA para acelerar seu negocio. Criamos sistemas web, apps mobile e automacoes com entrega rapida e custo acessivel. MVP em ate 30 dias.',
-  keywords: ['desenvolvimento de sistemas', 'software house', 'automacao com IA', 'MVP startup', 'aplicativo mobile', 'React Native', 'Next.js'],
+  metadataBase: new URL('https://mlluizdevtech.com.br'),
+  title: 'mlluizdevtech | Software House com IA e Automação',
+  description: 'Software sob medida com automação e IA para acelerar seu negócio. Criamos sistemas web, apps mobile e automações com entrega rápida e custo acessível. MVP em até 30 dias.',
+  keywords: ['desenvolvimento de sistemas', 'software house', 'automação com IA', 'MVP startup', 'aplicativo mobile', 'React Native', 'Next.js'],
   authors: [{ name: 'mlluizdevtech' }],
   creator: 'mlluizdevtech',
   generator: 'Next.js',
@@ -26,12 +30,12 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'pt_BR',
     siteName: 'mlluizdevtech',
-    title: 'mlluizdevtech | Software House com IA e Automacao',
-    description: 'A software house que usa IA para entregar sistemas em metade do tempo, pelo mesmo preco do mercado.',
+    title: 'mlluizdevtech | Software House com IA e Automação',
+    description: 'A software house que usa IA para entregar sistemas em metade do tempo, pelo mesmo preço do mercado.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'mlluizdevtech | Software House com IA e Automacao',
+    title: 'mlluizdevtech | Software House com IA e Automação',
     description: 'A software house que usa IA para entregar sistemas em metade do tempo.',
   },
   robots: {
@@ -69,10 +73,21 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-BR" className="bg-background">
+    <html lang="pt-BR" className="bg-background" suppressHydrationWarning>
       <body className={`${inter.variable} ${geistMono.variable} font-sans antialiased`}>
-        {children}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-md focus:bg-[var(--primary)] focus:px-4 focus:py-2 focus:text-white focus:outline-none"
+        >
+          Pular para o conteúdo principal
+        </a>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <MotionProvider>
+            <LocalBusinessJsonLd />
+            {children}
+            {process.env.NODE_ENV === 'production' && <Analytics />}
+          </MotionProvider>
+        </ThemeProvider>
       </body>
     </html>
   )

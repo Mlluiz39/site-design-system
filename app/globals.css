@@ -88,30 +88,65 @@
 
 .dark {
   --background: #0a1317;
-  --foreground: #ffffff;
+  --foreground: #f0f2f5;
   --canvas: #0a1317;
-  --surface-soft: #1c1e21;
-  --card: #1c1e21;
-  --card-foreground: #ffffff;
-  --popover: #1c1e21;
-  --popover-foreground: #ffffff;
+  --surface-soft: #141b21;
+
+  /* Button Colors */
+  --ink-button: #ffffff;
+  --on-ink-button: #0a1317;
+
+  /* Text Colors */
+  --ink-deep: #f0f2f5;
+  --ink: #e1e5ea;
+  --charcoal: #b0b8c1;
+  --slate: #8fa2b1;
+  --steel: #7b8e9d;
+  --stone: #5e7080;
+
+  /* Border Colors */
+  --hairline: #2e3a45;
+  --hairline-soft: #1e2a34;
+  --disabled-text: #4a5866;
+
+  /* Semantic Colors */
+  --success: #3dd56d;
+  --warning: #f5bc42;
+  --critical: #ff4d6a;
+
+  /* Card & Components */
+  --card: #141b21;
+  --card-foreground: #f0f2f5;
+  --popover: #141b21;
+  --popover-foreground: #f0f2f5;
   --primary-foreground: #ffffff;
-  --secondary: #1c1e21;
-  --secondary-foreground: #ffffff;
-  --muted: #1c1e21;
-  --muted-foreground: #8595a4;
-  --accent: #1c1e21;
-  --accent-foreground: #ffffff;
-  --border: #444950;
-  --input: #444950;
+  --secondary: #1e2a34;
+  --secondary-foreground: #f0f2f5;
+  --muted: #1e2a34;
+  --muted-foreground: #7b8e9d;
+  --accent: #1e2a34;
+  --accent-foreground: #f0f2f5;
+  --destructive: #ff4d6a;
+  --destructive-foreground: #ffffff;
+  --border: #2e3a45;
+  --input: #2e3a45;
   --ring: #0091ff;
-  --sidebar: #1c1e21;
-  --sidebar-foreground: #ffffff;
+
+  /* Charts */
+  --chart-1: #0091ff;
+  --chart-2: #3dd56d;
+  --chart-3: #f5bc42;
+  --chart-4: #00b4ff;
+  --chart-5: #3399ff;
+
+  /* Sidebar */
+  --sidebar: #0e171e;
+  --sidebar-foreground: #f0f2f5;
   --sidebar-primary: #0091ff;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #444950;
-  --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: #444950;
+  --sidebar-accent: #1e2a34;
+  --sidebar-accent-foreground: #f0f2f5;
+  --sidebar-border: #2e3a45;
   --sidebar-ring: #0091ff;
 }
 
@@ -162,9 +197,19 @@
   }
   body {
     @apply bg-background text-foreground;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   html {
     scroll-behavior: smooth;
+    color-scheme: light dark;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
 

@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import Link from "next/link"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { siteConfig } from "@/lib/site-config"
 
 export const metadata: Metadata = {
   title: "Política de Privacidade | mlluizdevtech",
@@ -13,7 +14,7 @@ export default function PrivacidadePage() {
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <section className="bg-[var(--canvas)] py-16 md:py-24">
           <div className="mx-auto max-w-3xl px-4 md:px-6 lg:px-8">
             <h1 className="text-4xl font-medium text-[var(--ink-deep)] mb-8">
@@ -96,7 +97,7 @@ export default function PrivacidadePage() {
                 8. Contato
               </h2>
               <p className="text-[var(--slate)] leading-relaxed mb-4">
-                Para exercer seus direitos ou esclarecer dúvidas sobre esta política, entre em contato pelo e-mail: contato@mlluizdevtech.com.br
+                Para exercer seus direitos ou esclarecer dúvidas sobre esta política, entre em contato pelo e-mail: {siteConfig.contact.email}
               </p>
             </div>
             

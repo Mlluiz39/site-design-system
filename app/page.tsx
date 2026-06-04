@@ -18,6 +18,7 @@ import {
   AnimatedLine
 } from "@/components/animations"
 import { motion } from "framer-motion"
+import { getWhatsAppUrl } from "@/lib/site-config"
 
 const services = [
   {
@@ -120,7 +121,7 @@ export default function HomePage() {
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-[var(--canvas)] py-16 md:py-24 lg:py-32">
           <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
@@ -178,7 +179,7 @@ export default function HomePage() {
                       className="w-full sm:w-auto rounded-full border-2 border-[var(--ink-deep)] text-[var(--ink-deep)] hover:bg-[var(--surface-soft)] px-8 py-6 text-base font-bold"
                     >
                       <a
-                        href="https://wa.me/5511999999999?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os."
+                        href={getWhatsAppUrl("general")}
                         target="_blank"
                         rel="noopener noreferrer"
                       >

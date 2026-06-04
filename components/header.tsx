@@ -5,6 +5,8 @@ import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
+import { getWhatsAppUrl } from "@/lib/site-config"
+import { ThemeToggle } from "@/components/theme-toggle"
 import { motion, AnimatePresence } from "framer-motion"
 
 const navItems = [
@@ -103,7 +105,7 @@ export function Header() {
               className="rounded-full border-2 border-[var(--ink-deep)] text-[var(--ink-deep)] hover:bg-[var(--surface-soft)]"
             >
               <a
-                href="https://wa.me/5511999999999?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os."
+                href={getWhatsAppUrl("general")}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -111,6 +113,7 @@ export function Header() {
               </a>
             </Button>
           </motion.div>
+          <ThemeToggle />
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Button
               asChild
@@ -182,7 +185,13 @@ export function Header() {
                   </Link>
                 </motion.div>
               ))}
-              <motion.div 
+              <motion.div
+                className="flex items-center gap-3 mt-4 pt-4 border-t border-[var(--hairline-soft)]"
+              >
+                <ThemeToggle />
+                <span className="text-sm text-[var(--steel)]">Alternar tema</span>
+              </motion.div>
+              <motion.div
                 className="flex flex-col gap-3 mt-4 pt-4 border-t border-[var(--hairline-soft)]"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -194,7 +203,7 @@ export function Header() {
                   className="w-full rounded-full border-2 border-[var(--ink-deep)] text-[var(--ink-deep)]"
                 >
                   <a
-                    href="https://wa.me/5511999999999?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os."
+                    href={getWhatsAppUrl("general")}
                     target="_blank"
                     rel="noopener noreferrer"
                   >

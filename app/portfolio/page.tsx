@@ -92,7 +92,7 @@ export default function PortfolioPage() {
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {/* Hero Section */}
         <section className="bg-[var(--canvas)] py-16 md:py-24">
           <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
@@ -110,6 +110,7 @@ export default function PortfolioPage() {
         {/* Projects Grid */}
         <section className="py-16 md:py-24 bg-[var(--surface-soft)]">
           <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
+            <h2 className="sr-only">Projetos</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
               {projects.map((project) => (
                 <div

@@ -4,6 +4,7 @@ import { ArrowRight, Code, Smartphone, Server, Bot, Wrench, Layers, CheckCircle2
 import { Button } from "@/components/ui/button"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { getWhatsAppUrl } from "@/lib/site-config"
 
 export const metadata: Metadata = {
   title: "Serviços | mlluizdevtech",
@@ -126,7 +127,7 @@ export default function ServicosPage() {
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {/* Hero Section */}
         <section className="bg-[var(--canvas)] py-16 md:py-24">
           <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
@@ -258,7 +259,7 @@ export default function ServicosPage() {
                   className="w-full sm:w-auto rounded-full border-2 border-[var(--canvas)] text-[var(--canvas)] bg-transparent hover:bg-white/10 px-8 py-6 text-base font-bold"
                 >
                   <a
-                    href="https://wa.me/5511999999999?text=Ol%C3%A1%21%20Preciso%20de%20uma%20solu%C3%A7%C3%A3o%20personalizada."
+                    href={getWhatsAppUrl("custom")}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
