@@ -75,7 +75,7 @@ const differentials = [
   {
     icon: HeadphonesIcon,
     title: "Suporte pós-entrega",
-    description: "30 dias de suporte incluso em todo projeto. Planos de manutenção a partir de R$500/mês.",
+    description: "30 dias de suporte incluso em todo projeto. Planos de manutenção a partir de R$100/mês.",
     metric: "SLA 24h úteis",
   },
 ]

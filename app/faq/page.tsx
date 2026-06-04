@@ -14,7 +14,7 @@ const faqs = [
     items: [
       {
         question: "Quanto custa desenvolver um sistema ou aplicativo?",
-        answer: "Depende do escopo. Referências: sites institucionais a partir de R$2.000, sistemas web a partir de R$5.000, apps mobile a partir de R$8.000. Fazemos análise gratuita antes de qualquer proposta.",
+        answer: "Depende do escopo. Referências: sites institucionais a partir de R$500, sistemas web a partir de R$2.500, apps mobile a partir de R$1.000. Fazemos análise gratuita antes de qualquer proposta.",
       },
       {
         question: "Vocês são mais baratos que uma agência tradicional?",
@@ -48,7 +48,7 @@ const faqs = [
     items: [
       {
         question: "Após a entrega, quem cuida do sistema?",
-        answer: "Todo projeto inclui 30 dias de suporte pós-entrega. Depois, oferecemos planos de manutenção a partir de R$500/mês com SLA de 24h úteis.",
+        answer: "Todo projeto inclui 30 dias de suporte pós-entrega. Depois, oferecemos planos de manutenção a partir de R$100/mês com SLA de 24h úteis.",
       },
       {
         question: "O que está incluso no suporte pós-entrega?",
